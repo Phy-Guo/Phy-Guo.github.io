@@ -2,11 +2,13 @@
 Berry Phase
 ---
 
+add new line
+
 以下仅为自己最近对于berry phase的理解，思考与笔记,如果有什么错误和误解，还请各位批评指正。具体知识可以翻阅David Vanderbilt的Berry Phases in Electronic Structure Theory的第三章内容。
 
 1.Berry connection
-对于berry connection,可以给出关于参量 λ 的定义： A(λ)=<uλ|i∂λuλ> 
-给予 |uλ> 给定的gauge transform，即： |u_λ>=e−iβ(λ)|uλ> ,我们可以诱导出关于 A~(λ) 的表达式：
+对于berry connection,可以给出关于参量 λ 的定义： $A(λ)=<u_λ|i∂_λu_λ>$ 
+给予 $\ket u$ 给定的gauge transform，即：$|u_λ>=e−iβ(λ)|uλ>$,我们可以诱导出关于 A~(λ) 的表达式：
 A~(λ)=<u~λ|i∂λu~λ>=<uλ|i∂λuλ>+β′(λ)
 给出条件|u~1>=|u~0> ，我们可以进一步得到： β(1)=β(0)+2πm ，其中 m 为任意整数。将 A~(λ) 在任一给定的闭合路径 (0→1) 上进行积分，我们得到的是gauge transform下的berry phase的变化：                                       
 ϕ~=ϕ+2πm
