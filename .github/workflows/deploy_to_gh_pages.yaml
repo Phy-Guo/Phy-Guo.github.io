@@ -1,0 +1,32 @@
+name: Hexo Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. git checkout
+        uses: actions/checkout@v2
+
+      - name: 2. setup nodejs
+        uses: actions/setup-node@v2
+
+      - name: 3. setup pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+
+      - name: 4. install hexo and plugins
+        run: npm install
+
+      - name: 5. generate blog
+        run: npx hexo g
+
+      - name: 6. deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: public
