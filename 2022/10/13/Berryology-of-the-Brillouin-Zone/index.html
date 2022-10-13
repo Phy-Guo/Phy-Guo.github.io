@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="author" content="John Doe">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Berry phase">
 
     <!-- Page Title -->
     
-        <title>Archive | Hexo</title>
+        <title>Berryology of the Brillouin Zone | Hexo</title>
     
     <link rel="icon" href="/img/avatar-default.png">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
@@ -64,8 +64,10 @@
     <div class="header-title-wrapper">
         <!-- Page Title -->
         <p class="header-title">
-              
-                Hexo
+             
+                
+                    Berryology of the Brillouin Zone
+                
             
         </p>  
     </div>    
@@ -85,7 +87,7 @@
 
                 
                     <span>
-                        <a class="header-btn" href="/archives" title="archives"><i class="fa fa fa-file-text-o"></i></a>
+                        <a class="catalog-btn header-btn"><i class="fa fa-list-ul"></i></a>
                     </span>
                 
             
@@ -95,48 +97,58 @@
 
             <!-- Main -->
             <main>
-                <!-- Archive -->
-<div class="archive-wrapper">
+                <article class="post-wrapper">
     
-    <div class="archive-block">
-        <!-- Post Title -->
-        <a href="/2022/10/13/Berryology-of-the-Brillouin-Zone/" title="Berryology of the Brillouin Zone">
-            <span class="archive-post-title">Berryology of the Brillouin Zone</span>
-        </a>
 
-        <!-- Date And Categories -->
-        <div>
-            <span class="archive-post-date">2022-10-13</span>
-            <span class="archive-categories">
-                
-            </span>
+    
+        <!-- Article Catalog -->
+        <div class="catalog-dropdown col-xs-12 col-sm-12">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#berryology-of-the-brillouin-zone"><span class="toc-number">1.</span> <span class="toc-text">Berryology of the Brillouin Zone</span></a></li></ol>
         </div>
-    </div>
     
-    <div class="archive-block">
-        <!-- Post Title -->
-        <a href="/2022/10/13/postArticle-1/" title="Berry Phase">
-            <span class="archive-post-title">Berry Phase</span>
-        </a>
 
-        <!-- Date And Categories -->
-        <div>
-            <span class="archive-post-date">2022-10-13</span>
-            <span class="archive-categories">
-                
-            </span>
-        </div>
-    </div>
     
-</div>
+        <!--For now, Lightbox Only Show in Post Layout -->
+        
 
-<!-- Pagination -->
-<div class="pagination-wrapper">
-    <ul class="pagination-btn">
         
         
-    </ul>
-</div>
+    
+
+    
+
+    <!-- Article Content -->
+    <div class="post-content">
+        <h1 id="berryology-of-the-brillouin-zone">Berryology of the Brillouin Zone</h1>
+<p>之前我们定义了关于Berry Phase的一些基础概念。我们发现对于一些特殊的闭合流形，我们能够从中算出一些拓扑不变量，这种不变量不同于我们所观测到的期望值，是一种新的物理量，并且有着良好的gauge invariant.下面，我们将从Bloch态<span class="math inline">\(|\psi_{nk}\rangle\)</span>入手，探究其中是否有之前所描述的性质。 ## The choice of berry phase 首先，我们认为后续所描述的能带间是独立的，即在缓慢演化过程中，态矢量不会由能带n跃迁至其他能带。同时，通过量子数<span class="math inline">\(\vec k\)</span>标记不同的<span class="math inline">\(|\psi_{n\vec k}\rangle\)</span>,可以认为这是一系列抽象至Hilbert空间内的正交归一基，同时也是体系哈密顿量对应的本征矢。最后，我们认为能带n上并无奇点(singularities)。<br />
+由于<span class="math inline">\(|\psi_{nk}\rangle=e^{ikr}|u_{nk}\rangle\)</span>，我们发现其在整个空间上的积分为 <span class="math display">\[\int_{-\infty}^{+\infty}\psi_{nk}^*(x)\psi_{n,k+b}^*(x)dx=\int_{-\infty}^{+\infty}e^{ibx}u_{nk}^*(x)u_{n,k+b}^*(x)dx\]</span> 其中b为有限值。显然，该积分为0，并且依赖于原胞的位置。因此，这里我们选择<span class="math inline">\(|u_{nk}\rangle\)</span>作为Berry phase中的态矢量，并选取其中具有归一性的基矢量，将上一篇中的态矢量演化过程表达为： <span class="math display">\[\langle u_{nk}|u_{n,k+b}\rangle=\int_{0}^a u_{nk}^*(x)u_{n,k+b}^*(x)dx\]</span> ### 待续</p>
+  
+    </div> 
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+
+    <div class="post-info-wrapper">
+            
+                    <!-- Post Info -->
+                    <p class="post-date">2022-10-13</p>
+                    
+                    
+                        <p class="post-info-categories">
+                            
+                        </p>
+                    
+
+                    
+            
+    </div>
+</article>
+
+
+    
+
             </main>
 
             <!-- 'To Top' Btn-->
