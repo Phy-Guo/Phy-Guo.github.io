@@ -1,6 +1,8 @@
 ---
-title: about
+title: About
 layout: about
-date: 2022-10-13 11:06:04
+date: 2022-10-14
+type:
+    about
 ---
-欢迎！
+本网页主要用于博主日常记录笔记、思考与想法。主要与凝聚态物理相关，也会有一些其他方面的涉猎。

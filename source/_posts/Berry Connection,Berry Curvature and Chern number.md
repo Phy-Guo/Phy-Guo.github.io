@@ -1,5 +1,8 @@
 ---
-title: Berry Phase
+title: Berry Connection,Berry Curvature and Chern number
+date: 2022-10-12 20:37:17
+tags: Berry phase
+category: Berry phase
 ---
 以下仅为自己最近对于berry phase的理解，思考与笔记。具体知识可以翻阅David Vanderbilt的Berry Phases in Electronic Structure Theory的第三章内容。
 
@@ -32,5 +35,5 @@ $$
 $$
  其中， := 表示，一种一对多的对应关系，即给定一个 $\vec Ω$ 在curve S 上的面积分对应多个 $\vec A$ 的环路积分。并且，需要注意的是，这并非一个闭合二维流形，而是一个任意曲面。等式成立的原因是，我们总能给出一个关于 $\vec β(\lambda)$ 的smooth gauge transform，使得这个曲面及其边界连续缓慢变化，使得 $\vec A$ 连续地变化至 $\vec {\tilde{A}}$  ，同时保证等式成立。但如果换一个视角，认为 $| {\vec u_λ}\rangle$ 是由其边界 $P$定义，我们也可以给出一种radical gauge transformation，使得 $Φ$ 产生了一个 $2πm$ 的差值( $m≠0$ )。这种gauge transformation并不能连续缓慢地变化到 S 内部并不产生一个涡流奇点(vortex-like singularity)。
  
-### 待续
+
 

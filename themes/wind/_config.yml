@@ -17,6 +17,12 @@ pages:
   archives:
     link: "/archives"
     icon: "fa fa-file-text-o"
+  category:
+    link: "/categories"
+    icon: "fa fa-th-list"
+  about:
+    link: "/about"
+    icon: "fa fa-user-circle"
 color:
   deactive: '#37474f'
 #  active: '#1b5e20'  # Spring

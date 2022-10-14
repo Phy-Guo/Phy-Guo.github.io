@@ -2,6 +2,7 @@
 title: Berryology of the Brillouin Zone
 date: 2022-10-13 20:37:17
 tags: Berry phase
+category: Berry phase
 ---
 # Berryology of the Brillouin Zone
 之前我们定义了关于Berry Phase的一些基础概念。我们发现对于一些特殊的闭合流形，我们能够从中算出一些拓扑不变量，这种不变量不同于我们所观测到的期望值，是一种新的物理量，并且有着良好的gauge invariant.下面，我们将从Bloch态$|\psi_{nk}\rangle$入手，探究其中是否有之前所描述的性质。
@@ -11,5 +12,6 @@ tags: Berry phase
 $$\int_{-\infty}^{+\infty}\psi_{nk}^*(x)\psi_{n,k+b}^*(x)dx=\int_{-\infty}^{+\infty}e^{ibx}u_{nk}^*(x)u_{n,k+b}^*(x)dx$$
 其中b为有限值。显然，该积分为0，并且依赖于原胞的位置。因此，这里我们选择$|u_{nk}\rangle$作为Berry phase中的态矢量，并选取其中具有归一性的基矢量，将上一篇中的态矢量演化过程表达为：
 $$\langle u_{nk}|u_{n,k+b}\rangle=\int_{0}^a u_{nk}^*(x)u_{n,k+b}^*(x)dx$$
-### 待续 
+
+## 待续
 
