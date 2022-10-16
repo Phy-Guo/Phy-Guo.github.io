@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Shane Guo">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",Berry phase">
+
+    <!-- Page Title -->
+    
+        <title>Wannier function | Guardian</title>
+    
+    <link rel="icon" href="/img/avatar-default.png">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="//cdn.bootcss.com/prettify/r298/prettify.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/google-prettify-monokai.css" type="text/css">
+    
+    
+<script src="/js/script.js"></script>
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+    <style>
+        .deactiveColor{
+            color: #37474f;
+        }
+        .activeColor{
+            color: #006064;
+        }
+        a:hover{
+            color: #006064;
+        }
+        .header-btn{
+            color: #37474f;
+        }
+        
+        .post-content img{
+            margin: 50px auto;
+        }
+        
+    </style>
+
+    
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div class="container">
+
+            <!-- Top Anchor -->
+            <div id="top"></div>
+
+            <!-- Header -->
+            <header class="header-wrapper">
+    <div class="header-title-wrapper">
+        <!-- Page Title -->
+        <p class="header-title">
+             
+                
+                    Wannier function
+                
+            
+        </p>  
+    </div>    
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+    
+    <div class="header-detail">
+        <!-- Header Button -->
+        <div class="header-btn-wrapper">
+            
+                <span>
+                    <a class="home-btn header-btn" href="/" title="homepage"><i class="fa fa-home"></i></a>
+                </span>
+
+                
+                    <span>
+                        <a class="catalog-btn header-btn"><i class="fa fa-list-ul"></i></a>
+                    </span>
+                
+            
+        </div>
+    </div>
+</header>
+
+            <!-- Main -->
+            <main>
+                <article class="post-wrapper">
+    
+
+    
+        <!-- Article Catalog -->
+        <div class="catalog-dropdown col-xs-12 col-sm-12">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wannier-functions"><span class="toc-number">1.</span> <span class="toc-text">Wannier Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#properties-of-the-wannier-functions"><span class="toc-number">1.1.</span> <span class="toc-text">Properties of the Wannier Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%85%E7%BB%AD"><span class="toc-number">1.1.1.</span> <span class="toc-text">待续</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+
+    
+        <!--For now, Lightbox Only Show in Post Layout -->
+        
+
+        
+        
+    
+
+    
+
+    <!-- Article Content -->
+    <div class="post-content">
+        <h1 id="wannier-functions">Wannier Functions</h1>
+<p>考虑到一个独立的能带<span class="math inline">\(E_n(k)\)</span>，同时在<span class="math inline">\(k\)</span>空间内平滑具有周期性。其傅里叶变化形式表达如下： <span class="math display">\[E_{nR} = \frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}E_{nk}d^3k\]</span> <span class="math display">\[E_{nk}=\sum\limits_{R}e^{ikR}E_{nR}\]</span> 如上我们认为<span class="math inline">\(E_n(k)\)</span>是连续缓慢变化的，因此我们预计其傅里叶变换形势下的<span class="math inline">\(E_{nR}\)</span>则是在实空间原点附近较大，并随着<span class="math inline">\(|R|\)</span>的增加迅速衰减(类似<span class="math inline">\(\delta(r)\)</span>)。 在上述基础上，我们选取<span class="math inline">\(E_n(k)\)</span>上的Bloch函数<span class="math inline">\(|\psi_{nk}\rangle\)</span>，同时对这组态矢量进行傅里叶变换： <span class="math display">\[|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}|\psi_{nk}\rangle d^3k\]</span> <span class="math display">\[|\psi_{nk}\rangle=\sum\limits_{R}e^{ikR}|w_{nR}\rangle\]</span> 其中，我们将<span class="math inline">\(|w_{nR}\rangle\)</span>定义为在能带n上的<span class="math inline">\(Wannier\,function\)</span>.</p>
+<h2 id="properties-of-the-wannier-functions">Properties of the Wannier Functions</h2>
+<p>Wannier functions有着以下性质：</p>
+<ol type="1">
+<li><em>局域性</em> <span class="math display">\[|w_{nR}(r)\rangle \rightarrow 0 ,as\ |r-R|\ get\ large\]</span></li>
+<li><em>平移对称性</em> <span class="math display">\[w_{nR}(r)=w_{n0}(r-R)\]</span></li>
+<li><em>正交性</em> <span class="math display">\[\langle w_{nR}|w_{nR^{&#39;}}\rangle=\delta_{RR^{&#39;}}\]</span></li>
+<li><em>投影算符</em> 形式 <span class="math display">\[P_n=\sum\limits_{R}|w_{nR}\rangle\langle w_{nR}|\]</span></li>
+<li>哈密顿量矩阵元在Wannier函数下是带对角(band diagonal)的，并且这些对角元正是<span class="math inline">\(E_{nR}\)</span>: <span class="math display">\[\langle w_{n0}|H|w_{nR}\rangle=E_{nR}\]</span></li>
+<li>Wannier函数间的位置矩阵元是： <span class="math display">\[\langle w_{n0}|r|w_{nR}\rangle=A_{nR}\]</span> 实际上，后面我们会看到，<span class="math inline">\(A_{nR}\)</span>正是Berry connection <span class="math inline">\(A_n (k)\)</span>的傅里叶变换系数。</li>
+</ol>
+<p>通过上述结论，我们可以得到哈密顿量作用在Wannier function上的结果： <span class="math display">\[H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}H|\psi_{nk}\rangle d^3k\]</span> 同时，我们在等式两端左乘上<span class="math inline">\(\langle w_{n0}|\)</span>，可以得到： <span class="math display">\[\langle w_{n0}|H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|H|u_{nk}\rangle d^3k\]</span> 其中，利用了变换<span class="math inline">\(\langle \psi_k|\chi_{k^{&#39;}}\rangle=\frac{(2\pi)^3}{V_{cell}}\langle u_k |v_{k^{&#39;}}\rangle \delta(k-k^{&#39;})\)</span>,具体证明见附录。我们还看到实际上<span class="math inline">\(E_{nk}=\langle u_{nk}|H|u_{nk}\rangle\)</span>，这意味着我们可以通过构造Wannier函数来获得能带n上的精确的紧束缚表示。</p>
+<h3 id="待续">待续</h3>
+  
+    </div> 
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+
+    <div class="post-info-wrapper">
+            
+                    <!-- Post Info -->
+                    <p class="post-date">2022-10-16</p>
+                    
+                    
+                        <p class="post-info-categories">
+                            <a class="post-category-link" href="/categories/Berry-phase/">Berry phase</a>
+                        </p>
+                    
+
+                    
+            
+    </div>
+</article>
+
+
+    
+
+            </main>
+
+            <!-- 'To Top' Btn-->
+            
+                <div id="to-top">
+    <a href="#top" class="toTop">
+        <i class="fa fa-pagelines"></i>
+    </a>
+</div>
+            
+
+            <!-- Footer -->
+            
+                <footer class="footer-wrapper col-xs-12 col-sm-12">
+    <div class="footer-banner-wrapper">
+        <p class="footer-banner">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/" title="Hexo">Hexo</a></p>
+        <P class="footer-banner">Theme <a target="_blank" rel="noopener" href="https://github.com/Lonezj/hexo-theme-wind" title="Wind">wind</a></P>
+    </div>
+</footer>
+            
+        </div>
+    </body>
+</html>
