@@ -103,7 +103,7 @@
     
         <!-- Article Catalog -->
         <div class="catalog-dropdown col-xs-12 col-sm-12">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wannier-functions"><span class="toc-number">1.</span> <span class="toc-text">Wannier Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#properties-of-the-wannier-functions"><span class="toc-number">1.1.</span> <span class="toc-text">Properties of the Wannier Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%85%E7%BB%AD"><span class="toc-number">1.1.1.</span> <span class="toc-text">待续</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#wannier-functions"><span class="toc-number">1.</span> <span class="toc-text">Wannier Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#properties-of-the-wannier-functions"><span class="toc-number">1.1.</span> <span class="toc-text">Properties of the Wannier Functions</span></a></li></ol></li></ol>
         </div>
     
 
@@ -131,8 +131,18 @@
 <li>哈密顿量矩阵元在Wannier函数下是带对角(band diagonal)的，并且这些对角元正是<span class="math inline">\(E_{nR}\)</span>: <span class="math display">\[\langle w_{n0}|H|w_{nR}\rangle=E_{nR}\]</span></li>
 <li>Wannier函数间的位置矩阵元是： <span class="math display">\[\langle w_{n0}|r|w_{nR}\rangle=A_{nR}\]</span> 实际上，后面我们会看到，<span class="math inline">\(A_{nR}\)</span>正是Berry connection <span class="math inline">\(A_n (k)\)</span>的傅里叶变换系数。</li>
 </ol>
-<p>通过上述结论，我们可以得到哈密顿量作用在Wannier function上的结果： <span class="math display">\[H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}H|\psi_{nk}\rangle d^3k\]</span> 同时，我们在等式两端左乘上<span class="math inline">\(\langle w_{n0}|\)</span>，可以得到： <span class="math display">\[\langle w_{n0}|H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|H|u_{nk}\rangle d^3k\]</span> 其中，利用了变换<span class="math inline">\(\langle \psi_k|\chi_{k^{&#39;}}\rangle=\frac{(2\pi)^3}{V_{cell}}\langle u_k |v_{k^{&#39;}}\rangle \delta(k-k^{&#39;})\)</span>,具体证明见附录。我们还看到实际上<span class="math inline">\(E_{nk}=\langle u_{nk}|H|u_{nk}\rangle\)</span>，这意味着我们可以通过构造Wannier函数来获得能带n上的精确的紧束缚表示。</p>
-<h3 id="待续">待续</h3>
+<p>通过上述结论，我们可以得到哈密顿量作用在Wannier function上的结果： <span class="math display">\[H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}H|\psi_{nk}\rangle d^3k\]</span> 同时，我们在等式两端左乘上<span class="math inline">\(\langle w_{n0}|\)</span>，可以得到： <span class="math display">\[\langle w_{n0}|H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|H|u_{nk}\rangle d^3k\]</span> 其中，利用了变换<span class="math inline">\(\langle \psi_k|\chi_{k^{&#39;}}\rangle=\frac{(2\pi)^3}{V_{cell}}\langle u_k |v_{k^{&#39;}}\rangle \delta(k-k^{&#39;})\)</span>,具体证明见附录(还没写)。我们还看到实际上<span class="math inline">\(E_{nk}=\langle u_{nk}|H|u_{nk}\rangle\)</span>，这意味着我们可以通过构造Wannier函数来获得能带n上的精确的紧束缚表示。</p>
+<p>我们还能看到性质5实际上有着更多的意义。这是坐标算符在Wannier函数下的矩阵元。正如我们上面提到的，这实际上有着Berry phase的形式。其中一种比较特别的形式便是<em>电荷中心</em>，定义如下： <span class="math display">\[\bar{r}_n = \langle w_{n0}|r|w_{n0}\rangle\]</span> 也就是<span class="math inline">\(A_{n,R=0}\)</span>,也可以表达为： <span class="math display">\[
+\begin{align}
+   \bar{r}_n &amp;= \frac {V_{cell}}{(2\pi)^3}\int_{BZ}A_n(k)d^3k \nonumber\\ &amp;= \frac {V_{cell}}{(2\pi)^3}\int_{BZ}\langle u_{nk} | i\nabla_k u_{nk}\rangle d^3k\nonumber
+\end{align} \]</span> 其中，利用了<span class="math inline">\(A_{nR} = \frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}A_{nk}d^3k\)</span>.在一维情形下，我们很容易就能类比得到： <span class="math display">\[\bar{x}_n = (a/2\pi)\int_{0}^{2\pi/a} \langle u_{nk} | i\partial_k u_{nk}\rangle dk\]</span> 其中<span class="math inline">\(\langle u_{nk} | i\partial_k u_{nk}\rangle\)</span>就是我们熟知的berry phase—<span class="math inline">\(\phi_n\)</span>.换句话来说，对于变化了<span class="math inline">\(2\pi\)</span>的berry phase，相当于在BZ内Wannier中心由<span class="math inline">\(x=0\)</span>演化到了<span class="math inline">\(x=a\)</span>.由Wannier函数的性质我们也可以预期，在移动了给定晶格常数a的长度后，Wannier中心会回到自己移动前的位置，但是却产生了一个晶格常数倍数的位移，这也会导致<span class="math inline">\(\phi_n\)</span>发生变化。<br />
+下面我们还需要证明一下性质6。假定在一维的BZ内，有一个对Wannier函数的坐标操作： <span class="math display">\[
+\begin{align}
+   (x-R)|w_{nR}\rangle &amp;= \frac{a}{2\pi}\int_{0}^{2\pi/a}(x-R)e^{ik(x-R)}|u_{nk}\rangle dk \nonumber 
+   \\&amp;=\frac{a}{2\pi}\int_{0}^{2\pi/a}(-i\partial_ke^{ik(x-R)}|u_{nk}\rangle dk) \nonumber 
+   \\&amp;=\frac{a}{2\pi}\int_{0}^{2\pi/a}e^{ik(x-R)}(i\partial_k|u_{nk}\rangle )dk \nonumber
+\end{align}\]</span> 扩展至3维，并稍微移动一项到等式右边我们就能得到： <span class="math display">\[r|w_{nR}\rangle= \frac {V_{cell}}{(2\pi)^3} \int_{BZ} e^{ikR}[e^{ikr}(R+i\nabla_k)|u_{nk}\rangle]d^3k\]</span> 左乘上<span class="math inline">\(\langle w_{n0}|\)</span>，其中包含R的项在积分后等于<span class="math inline">\(R\delta_{0,R}=0\)</span>,最后得到的是： <span class="math display">\[\langle w_{n0}|r|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|i\nabla_k u_{nk}\rangle d^3k\]</span> 等式右边便是我们之前定义的<span class="math inline">\(A_{nR}\)</span>项.</p>
+<p>综上所述，我们得到了一种新的视角，即固体中能带上的性质可以通过Wannier函数来表达。其中，对于Wannier函数中哈密顿量矩阵元可以用于表示电子在各个最近邻晶格间的Hopping，同时对于On-site能也可以通过<span class="math inline">\(E_{n0}\)</span>表达(取R=0)；并且，我们还得到了与Berry phase相关的Wannier函数中心<span class="math inline">\(\langle w_{n0}|x|w_{n0}\rangle\)</span>。在第四章我们能看到，Wan-nier函数中心的位移正是绝缘体中电极化理论的核心。</p>
   
     </div> 
 
