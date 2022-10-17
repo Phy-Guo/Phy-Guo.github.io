@@ -39,6 +39,29 @@ $$P_n=\sum\limits_{R}|w_{nR}\rangle\langle w_{nR}|$$
 $$H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}H|\psi_{nk}\rangle d^3k$$
 同时，我们在等式两端左乘上$\langle w_{n0}|$，可以得到：
 $$\langle w_{n0}|H|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|H|u_{nk}\rangle d^3k$$
-其中，利用了变换$\langle \psi_k|\chi_{k^{'}}\rangle=\frac{(2\pi)^3}{V_{cell}}\langle u_k |v_{k^{'}}\rangle \delta(k-k^{'})$,具体证明见附录。我们还看到实际上$E_{nk}=\langle u_{nk}|H|u_{nk}\rangle$，这意味着我们可以通过构造Wannier函数来获得能带n上的精确的紧束缚表示。
+其中，利用了变换$\langle \psi_k|\chi_{k^{'}}\rangle=\frac{(2\pi)^3}{V_{cell}}\langle u_k |v_{k^{'}}\rangle \delta(k-k^{'})$,具体证明见附录(还没写)。我们还看到实际上$E_{nk}=\langle u_{nk}|H|u_{nk}\rangle$，这意味着我们可以通过构造Wannier函数来获得能带n上的精确的紧束缚表示。
 
-### 待续
+我们还能看到性质5实际上有着更多的意义。这是坐标算符在Wannier函数下的矩阵元。正如我们上面提到的，这实际上有着Berry phase的形式。其中一种比较特别的形式便是*电荷中心*，定义如下：
+$$\bar{r}_n = \langle w_{n0}|r|w_{n0}\rangle$$
+也就是$A_{n,R=0}$,也可以表达为：
+$$
+\begin{align}
+   \bar{r}_n &= \frac {V_{cell}}{(2\pi)^3}\int_{BZ}A_n(k)d^3k \nonumber\\ &= \frac {V_{cell}}{(2\pi)^3}\int_{BZ}\langle u_{nk} | i\nabla_k u_{nk}\rangle d^3k\nonumber
+\end{align} $$
+其中，利用了$A_{nR} = \frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}A_{nk}d^3k$.在一维情形下，我们很容易就能类比得到：
+$$\bar{x}_n = (a/2\pi)\int_{0}^{2\pi/a} \langle u_{nk} | i\partial_k u_{nk}\rangle dk$$
+其中$\langle u_{nk} | i\partial_k u_{nk}\rangle$就是我们熟知的berry phase—$\phi_n$.换句话来说，对于变化了$2\pi$的berry phase，相当于在BZ内Wannier中心由$x=0$演化到了$x=a$.由Wannier函数的性质我们也可以预期，在移动了给定晶格常数a的长度后，Wannier中心会回到自己移动前的位置，但是却产生了一个晶格常数倍数的位移，这也会导致$\phi_n$发生变化。  
+下面我们还需要证明一下性质6。假定在一维的BZ内，有一个对Wannier函数的坐标操作：
+$$
+\begin{align}
+   (x-R)|w_{nR}\rangle &= \frac{a}{2\pi}\int_{0}^{2\pi/a}(x-R)e^{ik(x-R)}|u_{nk}\rangle dk \nonumber 
+   \\&=\frac{a}{2\pi}\int_{0}^{2\pi/a}(-i\partial_ke^{ik(x-R)}|u_{nk}\rangle dk) \nonumber 
+   \\&=\frac{a}{2\pi}\int_{0}^{2\pi/a}e^{ik(x-R)}(i\partial_k|u_{nk}\rangle )dk \nonumber
+\end{align}$$
+扩展至3维，并稍微移动一项到等式右边我们就能得到：
+$$r|w_{nR}\rangle= \frac {V_{cell}}{(2\pi)^3} \int_{BZ} e^{ikR}[e^{ikr}(R+i\nabla_k)|u_{nk}\rangle]d^3k$$
+左乘上$\langle w_{n0}|$，其中包含R的项在积分后等于$R\delta_{0,R}=0$,最后得到的是：
+$$\langle w_{n0}|r|w_{nR}\rangle=\frac{V_{cell}}{(2\pi)^3}\int_{BZ}e^{-ikR}\langle u_{nk}|i\nabla_k u_{nk}\rangle d^3k$$
+等式右边便是我们之前定义的$A_{nR}$项.  
+
+综上所述，我们得到了一种新的视角，即固体中能带上的性质可以通过Wannier函数来表达。其中，对于Wannier函数中哈密顿量矩阵元可以用于表示电子在各个最近邻晶格间的Hopping，同时对于On-site能也可以通过$E_{n0}$表达(取R=0)；并且，我们还得到了与Berry phase相关的Wannier函数中心$\langle w_{n0}|x|w_{n0}\rangle$。在第四章我们能看到，Wan-nier函数中心的位移正是绝缘体中电极化理论的核心。
