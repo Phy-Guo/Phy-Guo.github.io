@@ -31,7 +31,7 @@ $$
 \end{aligned}
 $$
 
-![avatar](/grahene/kp1.png)
+{% asset_img kp1.png [石墨烯] %}
 
 
 substituting the solution to (3), two solutions would be obtained with the hamiltonian matrix

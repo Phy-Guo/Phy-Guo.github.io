@@ -42,4 +42,4 @@ $$u_{n,k=2\pi/a}(x)=e^{-2\pi ix/a}u_{n,k=0}(x)$$
 $$\phi_n=-Imln[\langle u_{nk_0}|u_{nk_1}\rangle\langle u_{nk_1}|u_{nk_2}\rangle...\langle u_{nk_{N-1}}|e^{-2\pi ix/a}u_{nk_0}\rangle]$$
 在计算闭合循环时，注意到我们需要在$k=2\pi/a$返回到$k=0$时有一个相位因子！因此，我们需要在计算时注意这一特性，并把它考虑到闭合路径中的计算，这也是BZ所特有的性质。下一节，我们将进一步利用在BZ中另一种局域性的态矢量来构造Berry connection，即Wannier函数。
 
-![avatar](/Berryology%20of%20the%20Brillouin%20Zone/1.png)
+{% asset_img BZ.png [布里渊区] %}
