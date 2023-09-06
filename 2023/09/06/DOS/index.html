@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Shane Guo">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",EnergyBand Calculation">
+
+    <!-- Page Title -->
+    
+        <title>DOS | Guardian</title>
+    
+    <link rel="icon" href="/img/avatar-default.png">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="//cdn.bootcss.com/prettify/r298/prettify.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/google-prettify-monokai.css" type="text/css">
+    
+    
+<script src="/js/script.js"></script>
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+    <style>
+        .deactiveColor{
+            color: #37474f;
+        }
+        .activeColor{
+            color: #006064;
+        }
+        a:hover{
+            color: #006064;
+        }
+        .header-btn{
+            color: #37474f;
+        }
+        
+        .post-content img{
+            margin: 50px auto;
+        }
+        
+    </style>
+
+    
+  
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div class="container">
+
+            <!-- Top Anchor -->
+            <div id="top"></div>
+
+            <!-- Header -->
+            <header class="header-wrapper">
+    <div class="header-title-wrapper">
+        <!-- Page Title -->
+        <p class="header-title">
+             
+                
+                    DOS
+                
+            
+        </p>  
+    </div>    
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+    
+    <div class="header-detail">
+        <!-- Header Button -->
+        <div class="header-btn-wrapper">
+            
+                <span>
+                    <a class="home-btn header-btn" href="/" title="homepage"><i class="fa fa-home"></i></a>
+                </span>
+
+                
+                    <span>
+                        <a class="catalog-btn header-btn"><i class="fa fa-list-ul"></i></a>
+                    </span>
+                
+            
+        </div>
+    </div>
+</header>
+
+            <!-- Main -->
+            <main>
+                <article class="post-wrapper">
+    
+
+    
+        <!-- Article Catalog -->
+        <div class="catalog-dropdown col-xs-12 col-sm-12">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#density-of-states-calculation"><span class="toc-number">1.</span> <span class="toc-text">Density of States Calculation</span></a></li></ol>
+        </div>
+    
+
+    
+        <!--For now, Lightbox Only Show in Post Layout -->
+        
+
+        
+        
+    
+
+    
+
+    <!-- Article Content -->
+    <div class="post-content">
+        <h1 id="density-of-states-calculation">Density of States Calculation</h1>
+<p>通过能谱的计算，我们可以计算一个给定材料大小的态密度。这里给出态密度的定义： <span class="math display">\[
+    D(E) = N(E)/V
+\]</span> 其中，<span class="math inline">\(N(E)\delta E\)</span>为给定体积<span class="math inline">\(V\)</span>系统内<span class="math inline">\(E\)</span>到<span class="math inline">\(E+\delta E\)</span>内的电子态数量</p>
+<p>在计算中，由于我们采取的是离散动量空间计算，因此得到的能量也是离散后的，此时态密度的定义可以认为是： <span class="math display">\[
+    D(E) = \frac{1}{V} \sum_{i=1}^N \delta(E - E(\boldsymbol{k}_i))
+\]</span></p>
+<p>注意到量纲上,<span class="math inline">\(\delta(E- E(\boldsymbol{k}_i))\)</span>为<span class="math inline">\([{\rm Energy}]^{-1}\)</span>. 因此态密度的量纲为: <span class="math inline">\([{\rm Energy}]^{-1} [{\rm Volume}]^{-1}\)</span>、</p>
+<p>接着，我们进行求和化积分的操作,可以得到: <span class="math display">\[
+    D(E) = \frac{1}{V} \frac{V}{(2\pi)^d} \int_{BZ} dk^{d} \delta(E - E(\boldsymbol{k}))
+\]</span></p>
+<p>此处，<span class="math inline">\(d\)</span>为空间维度. 在程序中计算时，我们无法使用积分公式进行连续计算.因此，我们在离散化该积分后，我们可以得到最终在程序中使用的态密度公式: <span class="math display">\[
+    D(E) = \frac{1}{(2\pi)^d} \sum_{k} \delta(E - E(\boldsymbol{k})) \Delta k
+\]</span> 其中,<span class="math inline">\(\Delta k\)</span>为动量空间内单个<span class="math inline">\(k\)</span>点所占的动量空间体积元(<span class="math inline">\(dk \rightarrow \Delta k\)</span>)</p>
+  
+    </div> 
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+
+    <div class="post-info-wrapper">
+            
+                    <!-- Post Info -->
+                    <p class="post-date">2023-09-06</p>
+                    
+                    
+                        <p class="post-info-categories">
+                            
+                        </p>
+                    
+
+                    
+            
+    </div>
+</article>
+
+
+    
+
+            </main>
+
+            <!-- 'To Top' Btn-->
+            
+                <div id="to-top">
+    <a href="#top" class="toTop">
+        <i class="fa fa-pagelines"></i>
+    </a>
+</div>
+            
+
+            <!-- Footer -->
+            
+                <footer class="footer-wrapper col-xs-12 col-sm-12">
+    <div class="footer-banner-wrapper">
+        <p class="footer-banner">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/" title="Hexo">Hexo</a></p>
+        <P class="footer-banner">Theme <a target="_blank" rel="noopener" href="https://github.com/Lonezj/hexo-theme-wind" title="Wind">wind</a></P>
+    </div>
+</footer>
+            
+        </div>
+    </body>
+</html>
