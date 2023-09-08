@@ -10,7 +10,7 @@
 
     <!-- Page Title -->
     
-        <title>Archive | Guardian</title>
+        <title>ARPES学习1 | Guardian</title>
     
     <link rel="icon" href="/img/avatar-default.png">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
@@ -64,8 +64,10 @@
     <div class="header-title-wrapper">
         <!-- Page Title -->
         <p class="header-title">
-              
-                Guardian
+             
+                
+                    ARPES学习1
+                
             
         </p>  
     </div>    
@@ -85,15 +87,7 @@
 
                 
                     <span>
-                        <a class="header-btn" href="/archives" title="archives"><i class="fa fa fa-file-text-o"></i></a>
-                    </span>
-                
-                    <span>
-                        <a class="header-btn" href="/categories" title="category"><i class="fa fa fa-th-list"></i></a>
-                    </span>
-                
-                    <span>
-                        <a class="header-btn" href="/about" title="about"><i class="fa fa fa-user-circle"></i></a>
+                        <a class="catalog-btn header-btn"><i class="fa fa-list-ul"></i></a>
                     </span>
                 
             
@@ -103,48 +97,64 @@
 
             <!-- Main -->
             <main>
-                <!-- Archive -->
-<div class="archive-wrapper">
+                <article class="post-wrapper">
     
-    <div class="archive-block">
-        <!-- Post Title -->
-        <a href="/2023/09/08/ARPES%E5%AD%A6%E4%B9%A01/" title="ARPES学习1">
-            <span class="archive-post-title">ARPES学习1</span>
-        </a>
 
-        <!-- Date And Categories -->
-        <div>
-            <span class="archive-post-date">2023-09-08</span>
-            <span class="archive-categories">
-                
-            </span>
+    
+        <!-- Article Catalog -->
+        <div class="catalog-dropdown col-xs-12 col-sm-12">
+            
         </div>
-    </div>
     
-    <div class="archive-block">
-        <!-- Post Title -->
-        <a href="/2023/09/06/DOS/" title="DOS">
-            <span class="archive-post-title">DOS</span>
-        </a>
 
-        <!-- Date And Categories -->
-        <div>
-            <span class="archive-post-date">2023-09-06</span>
-            <span class="archive-categories">
-                
-            </span>
-        </div>
-    </div>
     
-</div>
+        <!--For now, Lightbox Only Show in Post Layout -->
+        
 
-<!-- Pagination -->
-<div class="pagination-wrapper">
-    <ul class="pagination-btn">
         
         
-    </ul>
-</div>
+    
+
+    
+
+    <!-- Article Content -->
+    <div class="post-content">
+        <p>以下是对Angle Resolved Photoemssion Spectroscopy(ARPES) 的理论推导内容： ## 基本原理 ARPES的基本原理是基于实验过程和结果。通过光激发使得电子由初态<span class="math inline">\(i\)</span>，波函数为<span class="math inline">\(\Psi_i\)</span>到终态<span class="math inline">\(f\)</span>，波函数为<span class="math inline">\(\Psi_f\)</span>,其中光场的矢势为<span class="math inline">\(A\)</span>. 假设有一微扰<span class="math inline">\(H_{int}\)</span>作用于N-电子态的初态<span class="math inline">\(\Psi_i\)</span>激发至<span class="math inline">\(\Psi_f\)</span>，其跃迁概率可以由费米黄金规则描述： <span class="math display">\[
+ w \propto \frac{2\pi}{\hbar} |&lt;{\Psi}|H_{int}|{\Psi}&gt;|^2\delta(E_f - E_i -\hbar w),
+\]</span> 在非相对论极限下，光与物质相互作用可以写为： <span class="math display">\[
+H_{int} = \sum_{i=1}^N [\frac{e}{m} \boldsymbol{A}(\boldsymbol{r}_i) \cdot \hat{\boldsymbol{p}_i} + \frac{e^2}{2m} \boldsymbol{A}^2(\boldsymbol{r}_i) + \frac{e\hbar}{2m} \hat{\boldsymbol{\sigma}}_i\cdot\nabla \times \boldsymbol{A}(\boldsymbol{r}_i )- \frac{e^2\hbar}{(2mc)^2} \hat{\sigma}_i \cdot \frac{\partial \boldsymbol{A}_i(\boldsymbol{r}_i)}{\partial t} \times \boldsymbol{A}(\boldsymbol{r}_i)],
+\]</span> 忽略自旋相关项和二次项，我们可以得到近似的相互作用哈密顿量： <span class="math display">\[
+H_{int} ~ \frac{e}{m} \sum_{i=1}^N \boldsymbol{A}(\boldsymbol{r}_i) \cdot \hat{\boldsymbol{p}_i} = \frac{e}{mc}\sum_{i=1}^Ne^{i\boldsymbol{k}_{h\nu} \cdot \boldsymbol{r}_i }\boldsymbol{\epsilon} \cdot \hat{\boldsymbol{p}_i} = -i\frac{\hbar e}{mc}\sum_{i=1}^Ne^{i\boldsymbol{k}_{h\nu} \cdot \boldsymbol{r}_i } \boldsymbol{\epsilon} \cdot  \nabla_i ,
+\]</span> 其中<span class="math inline">\(\boldsymbol{\epsilon}\)</span>为偏振方向.二次量子化后的哈密顿量为： <span class="math display">\[
+H_{int} = \sum_{\boldsymbol{k}_f,\boldsymbol{k}}M_{\boldsymbol{k}_f\boldsymbol{k}} \hat{c}_{\boldsymbol{k}_f}^{\dagger} \hat{c}_{\boldsymbol{k}},
+\]</span></p>
+  
+    </div> 
+
+    
+        <!-- Division Line -->
+        <div class="division"></div> 
+    
+
+    <div class="post-info-wrapper">
+            
+                    <!-- Post Info -->
+                    <p class="post-date">2023-09-08</p>
+                    
+                    
+                        <p class="post-info-categories">
+                            
+                        </p>
+                    
+
+                    
+            
+    </div>
+</article>
+
+
+    
+
             </main>
 
             <!-- 'To Top' Btn-->
